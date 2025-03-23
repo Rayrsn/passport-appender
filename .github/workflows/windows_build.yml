@@ -25,7 +25,7 @@ jobs:
         pip install PyQt5 reportlab Pillow pyinstaller
 
     - name: Build executable with PyInstaller
-      run: pyinstaller --onefile main.py 
+      run: pyinstaller --onefile main.py --collect-all PyQt5
 
     - name: Upload Windows EXE artifact
       uses: actions/upload-artifact@v4
